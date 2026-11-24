@@ -1,4 +1,4 @@
-# Opening and Closing Operations Using OpenCV
+# Ex 10 Opening and Closing Operations Using OpenCV
 ## Aim
 To write a Python program using OpenCV to perform morphological Opening and Closing operations on an image.
 
