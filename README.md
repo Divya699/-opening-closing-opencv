@@ -68,4 +68,62 @@ Compare the original, opened, and closed images.
 ### Register No: 212225240037
 
 ```
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+```
+```
+# Create a blank image
+image = np.zeros((500, 500, 3), dtype=np.uint8)
+# Add text on the image using cv2.putText
+font = cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(image, 'DIVYA PRIYA', (100, 250), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+```
+```
+# Create a simple square kernel (3x3)
+kernel = np.ones((3, 3), np.uint8)
+```
+```
+# Display the input image
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))  # Convert BGR to RGB for displaying
+plt.title("Input Image with Text")
+plt.axis('off')
+```
+```
+# Opening is erosion followed by dilation
+opened_image = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+```
+```
+# Display the result of Opening
+plt.imshow(cv2.cvtColor(opened_image, cv2.COLOR_BGR2RGB))  # Convert BGR to RGB
+plt.title("Opening Operation")
+plt.axis('off')
+```
+```
+# Closing is dilation followed by erosion
+closed_image = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
+```
+```
+# Display the result of Opening
+plt.imshow(cv2.cvtColor(opened_image, cv2.COLOR_BGR2RGB))  # Convert BGR to RGB
+plt.title("Closing Operation")
+plt.axis('off')
+```
+# OUTPUT
 
+
+<img width="478" height="812" alt="image" src="https://github.com/user-attachments/assets/00811d5e-482b-43b2-b983-544a918da03e" />
+## ORIGINAL IMAGE
+<img width="731" height="579" alt="image" src="https://github.com/user-attachments/assets/132c40d9-6494-494c-8beb-1412208b9ac6" />
+
+## OPENING OPERATION
+<img width="735" height="582" alt="image" src="https://github.com/user-attachments/assets/917771d8-1884-4eb5-bd6b-3d6006a99c45" />
+
+## CLOSING OPERATION
+
+<img width="719" height="495" alt="image" src="https://github.com/user-attachments/assets/bc872509-8d36-4e65-a8b6-49a022519efb" />
+
+
+# RESULT
+
+Thus, the morphological operations Opening and Closing are successfully implemented using OpenCV.
