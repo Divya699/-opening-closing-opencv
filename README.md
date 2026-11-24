@@ -111,12 +111,14 @@ plt.axis('off')
 ```
 # OUTPUT
 
-
 <img width="478" height="812" alt="image" src="https://github.com/user-attachments/assets/00811d5e-482b-43b2-b983-544a918da03e" />
+
 ## ORIGINAL IMAGE
+
 <img width="731" height="579" alt="image" src="https://github.com/user-attachments/assets/132c40d9-6494-494c-8beb-1412208b9ac6" />
 
 ## OPENING OPERATION
+
 <img width="735" height="582" alt="image" src="https://github.com/user-attachments/assets/917771d8-1884-4eb5-bd6b-3d6006a99c45" />
 
 ## CLOSING OPERATION
